@@ -1,3 +1,4 @@
+//Pecthgamon Sangnual 6410406819
 package ku.atm;
 
 import io.cucumber.java.Before;
@@ -69,5 +70,11 @@ public class StepDefATM {
         assertEquals(balance,
                      bank.getCustomer(id).getAccount().getBalance());
     }
+
+    @When("I deposit {float} to ATM")
+    public void i_deposit_to_atm(double amount){
+        atm.deposit(amount);
+    }
+
 
 }
